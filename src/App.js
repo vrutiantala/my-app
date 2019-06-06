@@ -3,6 +3,16 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
+fetch('http://127.0.0.1:3005/') //, {mode: 'no-cors'}
+            .then(function (res) {
+                return res.json()
+            })
+            .then(function (data) {
+                console.log(data);
+            }).catch(function (err) {
+                console.log(err)
+            })
+
   return (
     <div className="App">
       <header className="App-header">
