@@ -1,36 +1,36 @@
-import React from 'react';
+import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import EpicMenu from './EpicMenu.js'
+import NavMenu from './NavMenu';
+import MainMenu from './mainmenu.js';
+import { Route } from 'react-router-dom'
 
-function App() {
-fetch('http://127.0.0.1:3005/') //, {mode: 'no-cors'}
-            .then(function (res) {
-                return res.json()
-            })
-            .then(function (data) {
-                console.log(data);
-            }).catch(function (err) {
-                console.log(err)
-            })
+class App extends Component {
+  state ={
+    isLoading:true,
+    users :[],
+    error:null
+  }
+
+render() {
+
+            let links = [
+      { label: 'Home', link: '#home', active: true },
+      { label: 'About', link: '#about' },
+      { label: 'Portfolio', link: '#portfolio' },
+      { label: 'Contact Us', link: '#contact-us' },
+    ];
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+    <div className="container center">
+        <EpicMenu links={links} logo={logo} />
+        <MainMenu links={links} />
+        <NavMenu />
+        
+        </div>
+        );
 
+}
+}
 export default App;
