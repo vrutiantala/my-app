@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './EpicMenu.css';
 import searchIcon from './search-icon.png';
 import SelectBox from './features/select-box';
+import Form1 from './components/Form1.js'
 
 class EpicMenu extends Component {
     constructor() {
@@ -19,6 +20,7 @@ class EpicMenu extends Component {
     }
 
     render() {
+
         let searchForm = this.state.showForm ? (
             <form className="menu__search-form" method="POST">
                 <input className="menu__search-input" placeholder="Type and hit enter" />
@@ -31,13 +33,14 @@ class EpicMenu extends Component {
             ) : (
                 <a className="menu__link" href={link.link}>{link.label}</a>
             );
-
+                  
             return (
                 <li key={index} className="menu__list-item">
                     {linkMarkup}
                 </li>
             );
         });
+                    
 
         return (
             <nav className="menu">

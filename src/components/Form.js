@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './Form.css';
+import axios from 'axios';
 
+//import  Fetch1 from './Fetch1.js'
 const emailRegex = RegExp(
 
 
@@ -52,6 +54,19 @@ class Form extends Component {
         Email: ${this.state.email}
         Password: ${this.state.password}
       `);
+
+    const login   = {
+      first_name: this.state.firstName,
+      last_name: this.state.lastName,
+      email: this.state.email,
+      password: this.state.password
+    };
+
+    axios.post(`http://localhost:3001/signup`, { login })
+      .then(res => {
+        console.log(res);
+        console.log(res.data);
+      })      
     } else {
       console.error("FORM INVALID - DISPLAY ERROR MESSAGE");
     }
@@ -94,7 +109,7 @@ class Form extends Component {
       <div className="wrapper">
         <div className="form-wrapper">
           <h1>Create Account</h1>
-          <form onSubmit={this.handleSubmit} noValidate>
+          <form onSubmit={this.handleSubmit} noValidate  >
             <div className="firstName">
               <label htmlFor="firstName">First Name</label>
               <input
@@ -154,7 +169,9 @@ class Form extends Component {
             <div className="createAccount">
               <button type="submit">Create Account</button>
               <small>Already Have an Account?</small>
-            </div>
+
+            
+                       </div>
           </form>
         </div>
       </div>

@@ -3,19 +3,19 @@
 }
 
 .navigation {
-  background-color: #D43728;
+  display: flexbox;
+  background-color: #D3D3D3;
   box-shadow: 1px 1px 10px #777;
   float:left;
   height: 500px;
-  width: 250px;
-  margin-top: 150px;
-  margin-right: 1000px;
-  margin-left: 100px;
+  width: 90%;
+  margin-top :20px;
+  margin-left: 10px;
+  margin-right: 10px;
   position: absolute; 
-  flexDirection: row;
-       alignSelf: initial;
-         display: inline-block;
-       text-align: left;
+  flex-direction: row;
+  align-self: initial;
+  text-align: left;
 
 }
 
@@ -37,6 +37,7 @@
 
 .nav a {
   color: #fff;
+  align-items:center;
   text-decoration: none;
   display: flex;
   height: 100%;

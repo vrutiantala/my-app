@@ -1,12 +1,11 @@
 .main1
 {
-	background-color: blue;
+	background-color: #ADD8E6;
   box-shadow: 5px 1px 10px black;
-  float: right;
+  font-stretch: ultra-expanded;
   height: 500px;
-  width:  1000px;
-  margin-top:150px;
-  margin-left: 400px;
+  float:left;
+  margin-top:20px;
     position: absolute;
      display: flex;
      flexDirection: column;
@@ -35,8 +34,8 @@
 }
 .main2
 {
-	  display: inline-block;
-  color: #23C9FF;
+	  /*display: inline-block;
+*/  color: black;
   margin-bottom: 5px;
 }
 .main2:hover {

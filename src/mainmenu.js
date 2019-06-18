@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './mainmenu.css';
-
+//import Fetch1 from './components/Fetch1.js'
 
 class MainMenu extends Component{
 
@@ -43,12 +43,12 @@ render()
         return (
             <div className="main1">
             <main>
-                <h1>Welcome to online courses</h1>
+               <u> <h1>Welcome to online courses</h1></u><br />
 
-                <h2 className="main2"> What Would Yoy Like To Learn?</h2><br/> <br/>
+                <h5 className="main2"> What Would Yoy Like To Learn?</h5><br/> <br/>
                 <form className="form1" method="POST">
                 <input className="search-input" placeholder="example:data science" />
-            </form>
+            </form><br /><br />
             <h2>Our Most Popolar  Categories</h2>
 
 
@@ -61,7 +61,9 @@ render()
         <li><a href="/icon" >Updates</a></li>
               </ul>
             </main>
+            
             </div>
+
 	);
 }
 }

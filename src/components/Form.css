@@ -1,18 +1,9 @@
 .wrapper {
-  height: 50px;
-  width: 50px;
-  float: right;
-  margin-top: 250px;
-  margin-right:80px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  margin-top: 20px;
   background-color: #258ea6;
 }
 
 .form-wrapper {
-  width: 200px;
   display: flex;
   flex-direction: column;
   padding: 20px 40px;
