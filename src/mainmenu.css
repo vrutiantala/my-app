@@ -3,7 +3,7 @@
 	background-color: #ADD8E6;
   box-shadow: 5px 1px 10px black;
   font-stretch: ultra-expanded;
- width:100%;
+ width:150%;
  margin:0;
   margin-top: 600px;
   padding: 0;
@@ -63,7 +63,7 @@
 {
   .main1{
     float:bottom;
-    margin-top: 150px;
+    
     padding:100;
 
   }
