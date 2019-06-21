@@ -60,7 +60,7 @@ export default function CustomizedSelects() {
     setAge(event.target.value);
   };
   return (
-      <div>
+      <div >
     <form className={classes.root} autoComplete="off">
       <FormControl className={classes.margin}>
         <InputLabel htmlFor="age-customized-native-simple">Age</InputLabel>

@@ -42,11 +42,11 @@ render()
 
 
                   <ul className="nav">
-              <li><a href="/button" class="active">Data Science</a></li>
+              <li><a href="/button" >Data Science</a></li>
               <li><a href ="/image">Computer Security and Networks</a></li>
         <li><a href="/chip">Web Developement</a></li>
         <li><a href="/button-group" >Software Developement</a></li>
-        <li><a href="/icon" >Updates</a></li>
+        <li><a href="/icon" >Artificial Intelligence</a></li>
               </ul>
             </main>
             
