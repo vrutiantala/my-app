@@ -4,6 +4,7 @@ import './NavMenu.css';
 import Fetch from "./components/fetch.js";
 import { Route, Link, BrowserRouter as Router } from 'react-router-dom'
 //import { Link } from 'react-router-dom';
+import MainMenu from './mainmenu.js';
 const pStyle = {
   fontSize: '19px',
   fontFamily:'Arial Black',
@@ -11,14 +12,15 @@ const pStyle = {
 };
 class NavMenu extends Component {
     
+    someFn = (whatToShow) => {
+        this.props.callbackFromParent(whatToShow);
+    }
 
     render() {
         return (
   <div className="navigation">
       
-    <div className="logoWrapper">
-      <img src="https://www.vectorlogo.zone/logos/reactjs/reactjs-card.png" height="100" alt="logo" />
-    </div>
+    
     <nav>
      
   
@@ -27,23 +29,21 @@ class NavMenu extends Component {
     
       <ul class="div1">
         <li style={pStyle}>
-          <Link to="/fetch">Course</Link>
+          <Link to="/fetch" >Course</Link>
         </li>
         <li style={pStyle}>
-          <Link to="/image">Accomplishments</Link>
+          <Link to="/image" onClick={()=>this.someFn("accomplishments")}>Accomplishments</Link>
         </li>
         <li style={pStyle}>
-          <Link to="/chip">Recommendations</Link>
+          <Link to="/chip" onClick={()=>this.someFn("Recommendationclicked")}>Recommendations</Link>
         </li>
         <li style={pStyle}>
-          <Link to="/button-group">Acknowledgements</Link>
-        </li>
-        <li style={pStyle}>
-          <Link to="/icon">Updates</Link>
+          <Link to="/icon" onClick={()=>this.someFn("Updatesclicked")}>Updates</Link>
         </li>
       </ul>
       
       <Route exact path="/fetch" component={Fetch} />
+      <Route exact path="/image" component={MainMenu} />
       
       
     </div>

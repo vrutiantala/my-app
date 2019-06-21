@@ -1,6 +1,8 @@
 .wrapper {
   margin-top: 20px;
-  background-color: #258ea6;
+  
+  height:190px;
+  width: 300px;
 }
 
 .form-wrapper {
@@ -8,6 +10,7 @@
   flex-direction: column;
   padding: 20px 40px;
   border-radius: 10px;
+  margin-right:50px;
   box-shadow: 0px 10px 50px #555;
   background-color: #ffffff;
 }
@@ -113,4 +116,40 @@ input.error {
 .createAccount small {
   color: #999;
   font-weight: lighter;
+}
+
+
+@media (max-width: 1000px)
+{
+  .wrapper
+  {
+    width:300px;
+    height:25px;
+    margin-top: 10px;
+   
+    margin-left: 25px;
+
+  }
+}
+
+@media (max-width: 100px)
+{
+  .form-wrapper {
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  margin-top: 10px;
+
+  border-radius: 10px;
+  box-shadow: 0px 10px 50px #555;
+  background-color: #ffffff;
+}
+
+}
+@media (max-width:100px)
+{
+  .create-account
+  {
+    
+  }
 }
